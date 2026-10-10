@@ -1,4 +1,4 @@
-/*Index.html & Home.html File Css*/
+/*Mainpage.html & Home.html File Css*/
 *{
     padding: 0;
     margin: 0;
@@ -49,20 +49,30 @@ body{
     font-size: 16px;
     line-height: 1.8;
 }
+/* Contact + Project Container */
+.contact-project-container{
+    display: flex;
+    gap: 15px; /* space between cards */
+    margin: 30px;
+}
 /* Contact Section */
 .Contact{
+    flex: 1;
     background-color: white;
-    margin: 30px;
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.10);
 }
+
 .Contact h3{
     color: #38BDF8;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
+
 .Contact ul{
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .Contact li{
     margin-bottom: 10px;
@@ -76,29 +86,40 @@ body{
 }
 /* Project Section */
 .project{
+    flex: 1;
     background-color: white;
-    margin: 30px;
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.10);
 }
 .project h3{
     color: #38BDF8;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
+
 .project ul{
+    margin: 0;
     padding-left: 20px;
 }
+
 .project li{
     margin-bottom: 10px;
 }
+
 .project a{
     text-decoration: none;
     color: #0F172A;
     font-weight: bold;
 }
+
 .project a:hover{
     color: #38BDF8;
+}
+/* Mobile Responsive */
+@media (max-width: 768px){
+    .contact-project-container{
+        flex-direction: column;
+    }
 }
 /* Navigation */
 .list{

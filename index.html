@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="index.css">
+    <script> 
+    function submitID(){
+        let name =document.getElementById('name').value;
+        let passwd =document.getElementById('passwd1').value;
+        if (name === "Anshita Singh" && passwd === "Anshita@113!"){
+            window.open("mainpage.html", "_blank");
+        }else {
+          alert("Invalid Username or Password"); 
+        }
+         console.log("Username:", name);
+         console.log("Password:", passwd)
+    }
+function togglePassword() {
+    let password = document.getElementById("passwd1");
+
+    if (password.type === "password") {
+        password.type = "text";
+    } else {
+        password.type = "password";
+    }
+}
+ </script>
+</head>
+<body> 
+<div class="container">
+
+    <!-- Left Side: Portfolio Introduction -->
+    <div class="info">
+        <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+        <h1>Hi, I'm <span>Anshita Singh</span></h1>
+        <h3>Web Development Enthusiast</h3>
+        <p class="intro">
+            I enjoy creating websites and learning new
+            technologies. I love exploring web development
+            and building creative, user-friendly experiences.
+        </p>
+        <div class="skills">
+            <h3>Technical Skills</h3>
+            <div class="skill-list">
+                <div class="skill">
+     <i class="fa-brands fa-html5">HTML</i> </div>
+    
+  <div class="skill">
+   <i class="fa-brands fa-css3-alt">CSS</i></div>
+    <div class="skill">
+ <i class="fa-brands fa-js">JavaScript </i></div>
+ <div class="skill">
+   <i class="fa-brands fa-node-js">Node.js</i>
+ </div>
+  <div class="skill"><i class="fa-solid fa-database">MongoDB </i></div>   
+    </div></div>
+<div class="social-icons">
+    <!-- GitHub Logo -->
+<a href="https://github.com/anshitasingh11-git" target="_blank">
+    <img src="https://cdn.simpleicons.org/github/FFFFFF"
+         alt="GitHub" width="25" height="25">
+</a>
+
+<!-- LinkedIn Logo -->
+<a href="https://www.linkedin.com/in/anshita-singh-8a4424360" target="_blank">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiNkkFa8IVtnHV1rMFxZQE411t7DZY9hbjDz3zLX_n8g&s=10"
+         alt="LinkedIn" width="25" height="25">
+</a></div>
+</div>
+    
+    <!-- Right side page structure -->
+    <div class="val">
+        <h1 class="heading">Portfolio Login Page</h1>
+        <h4>Enter your login Credentials</h4>
+        <label for="name">User Name</label>
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter Username">
+       <label for="passwd1">Password</label> <div class="password-box"> <input type="password" id="passwd1" placeholder="Enter Password" > <span class="toggle-password" onclick="togglePassword()" title="Show/Hide Password" >👁</span> 
+    </div>
+        <button type="button"onclick="submitID()"id="sum">Login</button>
+        <pre>Don't have an account?</pre>
+        <p id="par" style="text-align: center;">
+            Welcome to my portfolio. Please log in to continue.
+        </p>
+    </div>
+</body>
+</html>;
